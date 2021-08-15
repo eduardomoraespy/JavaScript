@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Tratamento de dados
+        var nome = window.prompt('Qual é o seu nome?') // guardando dado na variável nome
+        window.alert('Bem vindo ' + nome + '!') // Cocatenando variavel em uma mensagem
+
+        //(number + number) = soma//adição
+        //(string + string) = cocatenação
+
+       // Convertendo para inteiro -- Number.parseInt(n)
+        /*
+        var n1 = Number.parseInt(window.prompt('Digite um numero: '))
+        var n2 = Number.parseInt(window.prompt('Digite um numero: '))
+        var soma = n1 + n2
+        */
+
+        //ou 
+        /*var n1 = window.prompt('Digite um numero: ')
+        var n2 = window.prompt('Digite um numero: ')
+        var soma = Number.parseInt(n1) + Number.parseInt(n2)
+        */ 
+
+        // O JS já identifica se é int ou float -- Number(n)
+        var n1 = Number(window.prompt('Digite um numero: '))
+        var n2 = Number(window.prompt('Digite um numero: '))
+        var soma = n1 + n2
+
+        window.alert(n1 + ' + ' + n2 + ' = ' + soma)
+
+        // Convertendo Number para string -- String(n) ou n.toString() para girar ao contrário
+        //ou
+        /*
+        var n1 = n1.toString()
+        var n2 = n2.toString()
+        */
+        window.alert('Concatenando ' + String(n1) + ' e ' + String(n2) + ' : ' + n1 + n2)
+
+        //formatando strings LEMBRAR DA CRASE
+        window.alert(`${n1} + ${n2} = ${n1+n2}`)
+        
+        // Tamanho do objeto n.length
+        var msg = 'JavaScript'
+        window.alert(`O tamanho da mensagem ${msg} é ${msg.length} `)
+
+        // Convertendo para maiúsculo n.toUpperCase()
+        window.alert(`${msg} Tudo maiúsculo ${msg.toUpperCase()} `)
+
+        // Convertendo para minúsculo  n.toLowerCase()
+        window.alert(`${msg} Tudo minúsculo  ${msg.toLowerCase()} `)
+
+        // Mostrando tudo na tela ----
+        document.write(`Seu nome é ${nome}, <br> Tudo em maiúsculo ${nome.toUpperCase()},<br> Tamanho é ${nome.length}<br><br><br>`)
+
+
+        // Formatando números
+        //float com duas casas decimais
+        var salario = 10500.4
+        document.write(`Seu salário é ${salario.toFixed(2)} <br>`)
+
+        // Trocando ponto por virgula
+        document.write(`Seu salário é ${salario.toFixed(2).replace('.', ',')}<br>`)
+
+        // mostrando salário em valor monetário para o Brasil
+        document.write(`Seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>`)
+
+    </script>
+
+</body>
+</html>
